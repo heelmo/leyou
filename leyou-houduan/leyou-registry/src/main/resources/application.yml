@@ -1,0 +1,20 @@
+server:
+  port: 10086
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:10086/eureka
+
+    register-with-eureka: false  #不要把自己注册进去
+    fetch-registry: false #拉取eureka服务信息
+
+  server:
+    enable-self-preservation: false #关闭自我保护
+    eviction-interval-timer-in-ms: 5000
+
+
+spring:
+  application:
+    name: leyou-registry
+

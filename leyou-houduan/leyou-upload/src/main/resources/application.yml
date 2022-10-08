@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: upload-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5  #服务的提供者每间隔5s给注册中心发送心跳
