@@ -8,3 +8,5 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:10086/eureka
     registry-fetch-interval-seconds: 5  #客户端每隔5s向服务端发送心跳
+zuul:
+  prefix: /api   #路由前缀  访问路径前的
