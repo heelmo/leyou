@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fzda
+    username: root
+    password: root
+  application:
+    name: service-provider
+mybatis:
+  type-aliases-package: com.xunfang.sysuser_conuster.entity
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8088/eureka

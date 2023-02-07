@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xunfang.fzdx_springboot.dao.SysUserDao">
+    <select id="findAll" resultType="sysuser">
+        select *from sysuser
+    </select>
+    <!--如果接口的方法中有参数，使用@param注解可以直接注入参数-->
+    <select id="selectSysUserById" parameterType="Integer" resultType="com.xunfang.fzdx_springboot.entity.SysUser">
+        select *from sysuser where id=#{id}
+    </select>
+    <!--增加操作-->
+    <insert id="addSysUser" parameterType="sysuser">
+        insert into sysuser(account,password,realName,roleId,phone,address,sex,birthday,createdUserId)VALUES
+        (#{account},#{password},#{realName},#{roleId},#{phone},#{address},#{sex},#{birthday},#{createdUserId})
+    </insert>
+    <!--修改-->
+    <update id="updateSysUser" parameterType="sysuser">
+        update sysuser set  account=#{account},password=#{password},realName=#{realName},roleId=#{roleId},
+                           phone=#{phone},address=#{address},sex=#{sex},birthday=#{birthday},createdUserId=#{createdUserId}
+                            where id=#{id}
+    </update>
+    <!--删除-->
+    <delete id="deleteSysUserById">
+        delete from sysuser where id=#{id}
+    </delete>
+</mapper>

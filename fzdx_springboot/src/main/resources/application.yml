@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fzda
+    username: root
+    password: root
+#≈‰÷√mybatis–≈œ¢
+
+#mybatis:
+  #type-aliases-package: com.xunfang.fzdx_springboot.entity
+  #mapper-locations: classpath:mapper/*.xml
